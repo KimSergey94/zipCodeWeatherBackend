@@ -11,17 +11,26 @@ using zipCodeWeather.DLL.Models;
 using System.Web.Http.Cors;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using zipCodeWeather.DLL.Interfaces;
 
 namespace zipCodeWeather.Controllers
 {
     [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
     public class WeatherController : ApiController
     {
+        private readonly IQueriesRepository _queriesRepository;
+        public WeatherController(IQueriesRepository queriesRepository)
+        {
+            _queriesRepository = queriesRepository;
+        }
+
         // GET: api/Weather/GetWeather
         [ResponseType(typeof(WeatherResult))]
         public HttpResponseMessage GetWeather(string zipCode)
         {
             var weather = GetWeatherData(zipCode);
+            _queriesRepository.SaveQuery(new Query() { Status = weather.Status, City = weather.City, ErrorMessage = weather.ErrorMessage, Temperature = weather.Temperature, TimeZone = weather.TimeZone, ZipCode = zipCode, Requested = DateTime.Now });
+
             var res = Request.CreateResponse(HttpStatusCode.Created, weather);
             res.Content = new StringContent(new JavaScriptSerializer().Serialize(weather), Encoding.UTF8, "application/json");
             return res;

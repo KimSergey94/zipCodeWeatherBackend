@@ -9,6 +9,7 @@ namespace zipCodeWeather.DLL.Interfaces
     public interface IQueriesRepository
     {
         List<Query> GetAllQueries();
+        void SaveQuery(Query query);
 
     }
 }

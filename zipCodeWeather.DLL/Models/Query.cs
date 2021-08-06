@@ -14,5 +14,6 @@ namespace zipCodeWeather.DLL.Models
 
         public string Status { get; set; }
         public string ErrorMessage { get; set; }
+        public DateTime Requested { get; set; }
     }
 }

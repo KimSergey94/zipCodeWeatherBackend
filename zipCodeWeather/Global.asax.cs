@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using Autofac.Integration.WebApi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,9 +29,11 @@ namespace zipCodeWeather
         {
             var builderMvc = new ContainerBuilder();
             builderMvc.RegisterControllers(Assembly.GetExecutingAssembly());
+            builderMvc.RegisterApiControllers(Assembly.GetExecutingAssembly());
             AutofacBootstrap.Init(builderMvc);
             var containerMvc = builderMvc.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(containerMvc));
+            GlobalConfiguration.Configuration.DependencyResolver = new AutofacWebApiDependencyResolver(containerMvc);
         }
     }
 }

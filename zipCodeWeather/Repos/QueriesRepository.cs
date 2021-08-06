@@ -18,6 +18,13 @@ namespace zipCodeWeather.Repos
             }
         }
 
-
+        public void SaveQuery(Query query)
+        {
+            using(var db = new ZipCodeWeatherContext())
+            {
+                db.Queries.Add(query);
+                db.SaveChanges();
+            }
+        }
     }
 }

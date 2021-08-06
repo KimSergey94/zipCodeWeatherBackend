@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zipCodeWeather", "zipCodeWeather\zipCodeWeather.csproj", "{8D09C047-29F7-46E5-9755-5039747222CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zipCodeWeather.DLL", "DLL\zipCodeWeather.DLL.csproj", "{0650ED68-092C-41E9-80DC-0B8FD44B2C59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zipCodeWeather.DLL", "zipCodeWeather.DLL\zipCodeWeather.DLL.csproj", "{1D93D9BC-049A-4A52-8042-1A82BD803C5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8D09C047-29F7-46E5-9755-5039747222CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D09C047-29F7-46E5-9755-5039747222CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D09C047-29F7-46E5-9755-5039747222CB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0650ED68-092C-41E9-80DC-0B8FD44B2C59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0650ED68-092C-41E9-80DC-0B8FD44B2C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0650ED68-092C-41E9-80DC-0B8FD44B2C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0650ED68-092C-41E9-80DC-0B8FD44B2C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D93D9BC-049A-4A52-8042-1A82BD803C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D93D9BC-049A-4A52-8042-1A82BD803C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D93D9BC-049A-4A52-8042-1A82BD803C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D93D9BC-049A-4A52-8042-1A82BD803C5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

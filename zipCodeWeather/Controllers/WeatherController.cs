@@ -17,6 +17,7 @@ namespace zipCodeWeather.Controllers
     [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
     public class WeatherController : ApiController
     {
+        // GET: api/Weather/GetWeather
         [ResponseType(typeof(WeatherResult))]
         public HttpResponseMessage GetWeather(string zipCode)
         {

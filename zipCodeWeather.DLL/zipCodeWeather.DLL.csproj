@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="documentation\zipCodeWeather Documentation.docx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
